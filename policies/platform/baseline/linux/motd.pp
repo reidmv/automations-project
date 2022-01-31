@@ -1,17 +1,14 @@
 class policy::platform::baseline::linux::motd {
   $default_motd = @("MOTD"/L)
     ===========================================================
-
-          Welcome to ${::hostname}
-
     Access  to  and  use of this server is  restricted to those
     activities expressly permitted by the system administration
     staff. If you are not sure if it is allowed, then DO NOT DO IT.
-
     ===========================================================
 
-    The operating system is: ${::operatingsystem}
-            The domain is: ${::domain}
+    OS: ------ ${getvar('facts.os.distro.description')}
+    Host: ---- ${getvar('facts.networking.hostname')}
+    Domain: -- ${getvar('facts.networking.domain')}
 
     | MOTD
 
@@ -22,12 +19,4 @@ class policy::platform::baseline::linux::motd {
   class { 'motd':
     content => $message,
   }
-
-  if !defined(File['/etc/issue']){
-    file { '/etc/issue':
-      ensure  => file,
-      content => $message,
-    }
-  }
-
 }

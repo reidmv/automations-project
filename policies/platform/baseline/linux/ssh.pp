@@ -3,8 +3,9 @@ class policy::platform::baseline::linux::ssh (
 ) {
 
   class { 'ssh':
-    permit_root_login => $permit_root_login,
-    purge_keys        => false
+    permit_root_login      => $permit_root_login,
+    purge_keys             => false,
+    sshd_config_print_motd => 'no',
   }
 
   firewall { '100 ssh allow all':
