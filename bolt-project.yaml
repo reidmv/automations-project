@@ -5,6 +5,7 @@ policies:
 - 'policy::*'
 modules:
 - name: ghoneycutt/ssh
+- name: jpadams-puppet_vim_env
 - name: nexcess/auditd
 - name: puppet-windows_firewall
 - name: puppet/epel
