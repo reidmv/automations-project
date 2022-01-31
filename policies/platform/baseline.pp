@@ -1,13 +1,9 @@
 class policy::platform::baseline (
-  Boolean $orch_agent  = false,
-  Array   $timeservers = ['0.pool.ntp.org','1.pool.ntp.org'],
   Boolean $enable_monitoring = false,
-){
+) {
 
   # Global
-  class { 'time':
-    servers => $timeservers,
-  }
+  include policy::platform::baseline::time
 
   # add sensu client
   if $enable_monitoring {
@@ -15,7 +11,7 @@ class policy::platform::baseline (
   }
 
   # OS Specific
-  case $::kernel {
+  case getvar('facts.kernel') {
     'windows': {
       include policy::platform::baseline::windows
     }

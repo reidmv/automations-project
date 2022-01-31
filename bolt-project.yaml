@@ -8,12 +8,14 @@ modules:
 - name: jpadams-puppet_vim_env
 - name: nexcess/auditd
 - name: puppet-windows_firewall
+- name: puppet/chrony
 - name: puppet/epel
 - name: puppetlabs-chocolatey
 - name: puppetlabs/firewall
 - name: puppetlabs/git
 - name: puppetlabs/motd
+- name: puppetlabs/ntp
 - name: puppetlabs/reboot
 - name: puppetlabs/registry
 - name: puppetlabs/stdlib
-- name: tse-time
+- name: tse/winntp
