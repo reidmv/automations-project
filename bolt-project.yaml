@@ -1,0 +1,5 @@
+---
+name: cygnus
+modulepath: ['.modules', '.policies_fixture']
+modules:
+- name: puppetlabs/stdlib
