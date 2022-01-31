@@ -1,5 +1,5 @@
 ---
-name: cygnus
+name: protocolus
 modulepath: ['.modules', '.policies_fixture']
 modules:
 - name: puppetlabs/stdlib
