@@ -4,14 +4,15 @@ modulepath: ['.policies_fixture']
 policies:
 - 'policy::*'
 modules:
-- name: puppetlabs/stdlib
-- name: nexcess/auditd
 - name: ghoneycutt/ssh
+- name: nexcess/auditd
+- name: puppet-windows_firewall
+- name: puppet/epel
+- name: puppetlabs-chocolatey
+- name: puppetlabs/firewall
+- name: puppetlabs/git
+- name: puppetlabs/motd
 - name: puppetlabs/reboot
 - name: puppetlabs/registry
-- name: puppetlabs/firewall
-- name: puppetlabs/motd
-- name: puppet/epel
-- name: puppetlabs/git
-- name: puppetlabs-chocolatey
-- name: puppet-windows_firewall
+- name: puppetlabs/stdlib
+- name: tse-time
