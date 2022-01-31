@@ -3,3 +3,13 @@ name: cygnus
 modulepath: ['.modules', '.policies_fixture']
 modules:
 - name: puppetlabs/stdlib
+- name: nexcess/auditd
+- name: ghoneycutt/ssh
+- name: puppetlabs/reboot
+- name: puppetlabs/registry
+- name: puppetlabs/firewall
+- name: puppetlabs/motd
+- name: puppet/epel
+- name: puppetlabs/git
+- name: puppetlabs-chocolatey
+- name: puppet-windows_firewall
