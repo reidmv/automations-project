@@ -1,6 +1,8 @@
 ---
 name: protocolus
 modulepath: ['.policies_fixture']
+policies:
+- 'policy::*'
 modules:
 - name: puppetlabs/stdlib
 - name: nexcess/auditd
